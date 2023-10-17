@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "F82 Db Facts Frequent Itemset from Db Function",
+    "description": "Time dimension Alias: This alias is specifically used for the Rolling month metrics.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_DB_FREQUENT_ITEMSET",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F82 Db Facts Frequent Itemset from Db Function.PROD_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F82 Db Facts Frequent Itemset from Db Function.PROD_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key"
+          }
+        ]
+      }
+    ]
+  }
+}

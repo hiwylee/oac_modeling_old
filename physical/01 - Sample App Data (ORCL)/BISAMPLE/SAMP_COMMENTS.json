@@ -1,0 +1,32 @@
+{
+  "physicalTable" : {
+    "name" : "SAMP_COMMENTS",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "COMMENTARY",
+      "dataType" : "VARCHAR",
+      "length" : 4000,
+      "nullable" : true
+    }, {
+      "name" : "DAY_KEY",
+      "dataType" : "DOUBLE",
+      "length" : 15,
+      "nullable" : true
+    }, {
+      "name" : "LOB_KEY",
+      "dataType" : "INT",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "COMMENT_ID",
+      "dataType" : "DOUBLE",
+      "length" : 15,
+      "nullable" : true
+    }, {
+      "name" : "EMPL_KEY",
+      "dataType" : "DOUBLE",
+      "length" : 0,
+      "nullable" : true
+    } ]
+  }
+}

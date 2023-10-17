@@ -1,0 +1,21 @@
+{
+  "initBlock" : {
+    "name" : "OR_REDDOTS",
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:10 - System DB (ORCL).SampleAppInitBlocks",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "select 100 from dual"
+    } ],
+    "variables" : [ {
+      "name" : "OR_REDDOTS",
+      "value" : "100",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : false,
+    "cacheQueryResult" : true
+  }
+}

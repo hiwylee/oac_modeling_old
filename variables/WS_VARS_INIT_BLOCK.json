@@ -1,0 +1,36 @@
+{
+  "initBlock" : {
+    "name" : "WS_VARS_INIT_BLOCK",
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:10 - System DB (ORCL).SampleAppInitBlocks",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "select 'San Francisco','United States','-', 'EUR' from dual"
+    } ],
+    "variables" : [ {
+      "name" : "WS_CITY",
+      "value" : "'San Francisco'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "WS_COUNTRY",
+      "value" : "'United States'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "WS_PROXY",
+      "value" : "'-'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "WS_CURRENCY",
+      "value" : "'EUR'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : false,
+    "cacheQueryResult" : true
+  }
+}

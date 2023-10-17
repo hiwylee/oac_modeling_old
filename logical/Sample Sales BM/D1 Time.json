@@ -1,0 +1,814 @@
+{
+  "logicalTable" : {
+    "name" : "D1 Time",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "Calendar Date" ],
+    "logicalColumns" : [ {
+      "name" : "Calendar Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.CALENDAR_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Day Key",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAY_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Cal Half",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.CAL_HALF" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Half Year"
+    }, {
+      "name" : "Cal Month",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.CAL_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Month"
+    }, {
+      "name" : "Cal Qtr",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.CAL_QTR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Qtr"
+    }, {
+      "name" : "Cal Week",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.CAL_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Week"
+    }, {
+      "name" : "Cal Year",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.CAL_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Year"
+    }, {
+      "name" : "Day Of Month",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAY_OF_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Day Of Week",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAY_OF_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Day Of Year",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAY_OF_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Fscl Half",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.FSCL_HALF" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Fscl Month",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.FSCL_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Fscl Qtr",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.FSCL_QTR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Fscl Week",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.FSCL_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Fscl Year",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.FSCL_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Julian Day Num",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.JULIAN_DAY_NUM" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Julian Month Num",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.JULIAN_MONTH_NUM" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Julian Qtr Num",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.JULIAN_QTR_NUM" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Julian Week Num",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.JULIAN_WEEK_NUM" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Per Name Half",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.PER_NAME_HALF" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Half Year"
+    }, {
+      "name" : "Per Name Month",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.PER_NAME_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Month"
+    }, {
+      "name" : "Per Name Qtr",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.PER_NAME_QTR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Qtr"
+    }, {
+      "name" : "Per Name Week",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.PER_NAME_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Week"
+    }, {
+      "name" : "Per Name Year",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.PER_NAME_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Year"
+    }, {
+      "name" : "Days In Qtr",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAYS_IN_QTR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Days In Mth",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAYS_IN_MTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Beg Of Qtr Wid",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.BEG_OF_QTR_WID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Beg Of Mth Wid",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.BEG_OF_MTH_WID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Beg Of Week Wid",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.BEG_OF_WEEK_WID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Holiday",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.HOLIDAY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Loaded",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.LOADED" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Cal Month End Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.CAL_MONTH_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Cal Qtr End Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.CAL_QTR_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Cal Half Year End Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.CAL_HALF_YEAR_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Cal Year End Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.CAL_YEAR_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Fscl Month End Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.FSCL_MONTH_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Fscl Qtr End Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.FSCL_QTR_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Fscl Year End Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.FSCL_YEAR_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Cal Week End Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.CAL_WEEK_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Fscl Week End Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.FSCL_WEEK_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Days In Week",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAYS_IN_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Days In Half Year",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAYS_IN_HALF_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Days In Year",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAYS_IN_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Days In Fscl Week",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAYS_IN_FSCL_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Days In Fscl Month",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAYS_IN_FSCL_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Days In Fscl Qtr",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAYS_IN_FSCL_QTR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Days In Fscl Half Year",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAYS_IN_FSCL_HALF_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Days In Fscl Year",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.DAYS_IN_FSCL_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    }, {
+      "name" : "Total Value",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.TOTAL_VALUE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "세부정보"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "LTS1 Time",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:MySampleSalesDatabase.BISAMPLE.D1 Time" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "TIME",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "합계",
+      "logicalLevels" : [ {
+        "name" : "합계",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "세부정보",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Calendar Date" ],
+        "displayKey" : "Calendar Date"
+      }, {
+        "name" : "Week",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Cal Week", "Per Name Week" ],
+        "displayKey" : "Cal Week",
+        "chronologicalKey" : [ "Per Name Week" ]
+      }, {
+        "name" : "Half Year",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Cal Half", "Per Name Half" ],
+        "displayKey" : "Cal Half",
+        "chronologicalKey" : [ "Per Name Half" ]
+      }, {
+        "name" : "Qtr",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Cal Qtr", "Per Name Qtr" ],
+        "displayKey" : "Cal Qtr",
+        "chronologicalKey" : [ "Per Name Qtr" ]
+      }, {
+        "name" : "Month",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Cal Month", "Per Name Month" ],
+        "displayKey" : "Cal Month",
+        "chronologicalKey" : [ "Per Name Month" ]
+      }, {
+        "name" : "Year",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Cal Year", "Per Name Year" ],
+        "displayKey" : "Cal Year",
+        "chronologicalKey" : [ "Per Name Year" ]
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "Time Hierarchy",
+        "levels" : [ "합계", "Year", "Half Year", "Qtr", "Month", "Week", "세부정보" ]
+      } ]
+    }
+  }
+}

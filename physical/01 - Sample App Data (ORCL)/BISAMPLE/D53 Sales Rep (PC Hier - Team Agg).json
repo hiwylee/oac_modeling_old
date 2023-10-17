@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "D53 Sales Rep (PC Hier - Team Agg)",
+    "description": "ZZZ - Not yet filled",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_EMPL_D_VH",
+    "joins": [      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D58 Sales Rep (Mgr Name)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D53 Sales Rep (PC Hier - Team Agg).Mgr_Id",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D58 Sales Rep (Mgr Name).Employee_Key"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "Mgr_Id"
+      ],
+      [
+        "Employee_Key"
+      ]
+    ]
+  }
+}

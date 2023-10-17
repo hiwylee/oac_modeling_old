@@ -1,0 +1,78 @@
+{
+  "logicalTable" : {
+    "name" : "F4 Headcount Base Measures",
+    "tags" : [ "Project:Samp Relational" ],
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "9- Full Time Empl  (Beg Period)",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Facts Headcount",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F50 Facts Headcount.Fte" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "BASED_ON_DIMENSION",
+        "dimensionBasedRules" : [ {
+          "dimension" : "OTHER",
+          "rule" : "SUM"
+        }, {
+          "dimension" : "logicalTable:01 - Sample App.D0 Time",
+          "rule" : "FIRST"
+        } ],
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "9- Full Time Empl  (End Period)",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Facts Headcount",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F50 Facts Headcount.Fte" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "BASED_ON_DIMENSION",
+        "dimensionBasedRules" : [ {
+          "dimension" : "OTHER",
+          "rule" : "SUM"
+        }, {
+          "dimension" : "logicalTable:01 - Sample App.D0 Time",
+          "rule" : "LAST"
+        } ],
+        "dataIsDense" : false
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "LTS1 Facts Headcount",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F50 Facts Headcount" ]
+      },
+      "dataGranularity" : [ "logicalLevel:01 - Sample App.D0 Time.Day Detail", "logicalLevel:01 - Sample App.D3 Offices.Offices Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "joins" : [ {
+      "rightTable" : "logicalTable:01 - Sample App.D0 Time",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:01 - Sample App.D3 Offices",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    } ]
+  }
+}

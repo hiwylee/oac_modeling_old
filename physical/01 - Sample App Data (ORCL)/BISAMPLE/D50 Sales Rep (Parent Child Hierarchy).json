@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "D50 Sales Rep (Parent Child Hierarchy)",
+    "description": "ZZZ - Not yet filled",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_EMPL_D_VH",
+    "joins": [      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D52 Sales Rep Position",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Postn_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D52 Sales Rep Position.Postn_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D59 Sales Rep (Mgr Name)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Mgr_Id",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D59 Sales Rep (Mgr Name).Employee_Key"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "Mgr_Id"
+      ],
+      [
+        "Employee_Key"
+      ]
+    ]
+  }
+}

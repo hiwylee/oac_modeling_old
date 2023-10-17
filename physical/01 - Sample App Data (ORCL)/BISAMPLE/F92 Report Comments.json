@@ -1,0 +1,31 @@
+{
+  "physicalTable": {
+    "name": "F92 Report Comments",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_COMMENTS",
+    "joins": [      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.DAY_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Day_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.LOB_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).LOB_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.EMPL_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key"
+          }
+        ]
+      }
+    ]
+  }
+}

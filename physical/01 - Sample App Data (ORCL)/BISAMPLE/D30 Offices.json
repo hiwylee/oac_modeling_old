@@ -1,0 +1,21 @@
+{
+  "physicalTable": {
+    "name": "D30 Offices",
+    "description": "Offices dimension Alias: Stores office dimension attribute information",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_OFFICES_D",
+    "joins": [      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D32 Offices Addresses",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D32 Offices Addresses.Address_Key"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "Office_Key"
+      ]
+    ]
+  }
+}

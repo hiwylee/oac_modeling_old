@@ -1,0 +1,42 @@
+{
+  "physicalTable" : {
+    "name" : "ODM_SAMP_CUSTOMERS_LTV",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "M_PRED_PROB_L",
+      "dataType" : "DOUBLE",
+      "length" : 15,
+      "nullable" : true
+    }, {
+      "name" : "M_PRED_BIN",
+      "dataType" : "VARCHAR",
+      "length" : 12,
+      "nullable" : true
+    }, {
+      "name" : "CUST_KEY",
+      "dataType" : "DOUBLE",
+      "length" : 15,
+      "nullable" : true
+    }, {
+      "name" : "M_PRED_PROB_H",
+      "dataType" : "DOUBLE",
+      "length" : 15,
+      "nullable" : true
+    }, {
+      "name" : "M_PRED_LTV_NODE",
+      "dataType" : "DOUBLE",
+      "length" : 15,
+      "nullable" : true
+    }, {
+      "name" : "M_PRED_PROB_VH",
+      "dataType" : "DOUBLE",
+      "length" : 15,
+      "nullable" : true
+    }, {
+      "name" : "M_PRED_PROB_M",
+      "dataType" : "DOUBLE",
+      "length" : 15,
+      "nullable" : true
+    } ]
+  }
+}

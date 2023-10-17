@@ -1,0 +1,26 @@
+{
+  "initBlock" : {
+    "name" : "OR_ARGS",
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:10 - System DB (ORCL).SampleAppInitBlocks",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "select 2008,2008 from dual;"
+    } ],
+    "variables" : [ {
+      "name" : "OR_ARG1",
+      "value" : "2008",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    }, {
+      "name" : "OR_ARG2",
+      "value" : "2008",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : false,
+    "cacheQueryResult" : true
+  }
+}

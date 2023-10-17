@@ -1,0 +1,69 @@
+{
+  "database" : {
+    "name" : "10 - System DB (ORCL)",
+    "databaseType" : "ORACLE_DATABASE",
+    "connectionPools" : [ {
+      "name" : "SampleAppInitBlocks",
+      "connection" : "'system'.'JEJUAIR-20231012-01'",
+      "remoteConnection" : false,
+      "maxConnections" : 10,
+      "requiresFullyQualifedTableNames" : true,
+      "connectionTimeoutUnit" : "NEVER",
+      "multithreaded" : true,
+      "supportParams" : true,
+      "writeBackConfig" : {
+        "dbSupportsUnicode" : false,
+        "bulkInsertBufferSize" : 10240,
+        "transactionBoundary" : 1000,
+        "tempTablePrefix" : "TT"
+      }
+    } ],
+    "virtualPrivateDatabase" : false,
+    "crmMetadataTables" : false,
+    "allowDirectDatabaseRequests" : false,
+    "allowPopulateQueries" : false,
+    "queryLimits" : [ {
+      "accessor" : "role:BIAdministrator",
+      "maxRowSetting" : "INHERIT",
+      "maxRows" : 100000,
+      "maxTimeSetting" : "INHERIT",
+      "maxTime" : 600,
+      "directDatabaseRequests" : "ALLOW"
+    }, {
+      "accessor" : "role:BIAuthor",
+      "maxRowSetting" : "INHERIT",
+      "maxRows" : 100000,
+      "maxTimeSetting" : "INHERIT",
+      "maxTime" : 600,
+      "directDatabaseRequests" : "ALLOW"
+    }, {
+      "accessor" : "role:BIConsumer",
+      "maxRowSetting" : "INHERIT",
+      "maxRows" : 100000,
+      "maxTimeSetting" : "INHERIT",
+      "maxTime" : 600,
+      "directDatabaseRequests" : "ALLOW"
+    }, {
+      "accessor" : "role:BISystem",
+      "maxRowSetting" : "INHERIT",
+      "maxRows" : 100000,
+      "maxTimeSetting" : "INHERIT",
+      "maxTime" : 600,
+      "directDatabaseRequests" : "ALLOW"
+    }, {
+      "accessor" : "role:SampleAppRole1",
+      "maxRowSetting" : "INHERIT",
+      "maxRows" : 100000,
+      "maxTimeSetting" : "INHERIT",
+      "maxTime" : 600,
+      "directDatabaseRequests" : "INHERIT"
+    }, {
+      "accessor" : "user:weblogic",
+      "maxRowSetting" : "INHERIT",
+      "maxRows" : 100000,
+      "maxTimeSetting" : "INHERIT",
+      "maxTime" : 600,
+      "directDatabaseRequests" : "ALLOW"
+    } ]
+  }
+}

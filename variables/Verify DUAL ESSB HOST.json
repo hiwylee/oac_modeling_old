@@ -1,0 +1,23 @@
+{
+  "initBlock" : {
+    "name" : "Verify DUAL ESSB HOST",
+    "description" : "This host information should be the computer name (or IP) of your essbase server host.",
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:10 - System DB (ORCL).SampleAppInitBlocks",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "Select 'http://localhost:9000/essbase/agent' From Dual"
+    } ],
+    "variables" : [ {
+      "name" : "ESSB_SERVER",
+      "description" : "Used to identify the Essbase Server Host in physical Layer",
+      "value" : "'http://localhost:9000/essbase/agent'",
+      "enableUsersToSetValue" : true,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : false,
+    "cacheQueryResult" : true
+  }
+}

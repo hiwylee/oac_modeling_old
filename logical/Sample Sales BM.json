@@ -1,0 +1,7 @@
+{
+  "businessModel" : {
+    "name" : "Sample Sales BM",
+    "description" : "제주항공 HOL",
+    "disable" : false
+  }
+}

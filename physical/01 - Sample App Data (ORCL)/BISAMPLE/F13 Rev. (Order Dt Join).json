@@ -1,0 +1,96 @@
+{
+  "physicalTable": {
+    "name": "F13 Rev. (Order Dt Join)",
+    "description": "Reveue Paid Date Alias: Joins to the Time dimension tables on the Paid date column in the fact.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_REVENUE_F",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Order_Day_Dt",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Empl_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Shipto_Addr_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Order_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted.Order_key"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "Order_Key"
+      ]
+    ]
+  }
+}

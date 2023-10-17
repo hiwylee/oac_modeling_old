@@ -1,0 +1,22 @@
+{
+  "initBlock" : {
+    "name" : "DB_COL_STATS_SCHEMA",
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:10 - System DB (ORCL).SampleAppInitBlocks",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT 'BISAMPLE' FROM DUAL"
+    } ],
+    "variables" : [ {
+      "name" : "DB_COL_STATS_SCHEMA",
+      "description" : "Used for Opaque view generating DBMS Statistic info",
+      "value" : "'BISAMPLE'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : false,
+    "cacheQueryResult" : true
+  }
+}

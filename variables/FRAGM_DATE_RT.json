@@ -1,0 +1,21 @@
+{
+  "initBlock" : {
+    "name" : "FRAGM_DATE_RT",
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:10 - System DB (ORCL).SampleAppInitBlocks",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT '15-DEC-2012' FROM DUAL"
+    } ],
+    "variables" : [ {
+      "name" : "FRAGM_DATE_RT",
+      "value" : "'15-DEC-2015'",
+      "enableUsersToSetValue" : true,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : false,
+    "cacheQueryResult" : true
+  }
+}

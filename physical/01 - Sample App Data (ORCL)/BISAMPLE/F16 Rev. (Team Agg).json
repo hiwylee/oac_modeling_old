@@ -1,0 +1,104 @@
+{
+  "physicalTable": {
+    "name": "F16 Rev. (Team Agg)",
+    "description": "ZZZ - Not yet filled\r\n",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_REVENUE_F",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Bill_Day_Dt",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Bill_Mth_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Mth_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Bill_Qtr_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain.QTR_KEY"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Empl_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg).Member_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Shipto_Addr_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "Order_Key"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "physicalTable" : {
+    "name" : "D4 Addresses",
+    "sourceTable" : "physicalTable:MySampleSalesDatabase.BISAMPLE.SAMP_ADDRESSES_D",
+    "caching" : {
+      "enable" : false,
+      "expiryTime" : 0
+    },
+    "overrideSourceCacheSetting" : false
+  }
+}

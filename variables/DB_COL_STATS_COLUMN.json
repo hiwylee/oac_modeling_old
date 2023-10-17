@@ -1,0 +1,22 @@
+{
+  "initBlock" : {
+    "name" : "DB_COL_STATS_COLUMN",
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:10 - System DB (ORCL).SampleAppInitBlocks",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT 'REVENUE' FROM DUAL"
+    } ],
+    "variables" : [ {
+      "name" : "DB_COL_STATS_COLUMN",
+      "description" : "Used for Opaque view generating DBMS Statistic info",
+      "value" : "'REVENUE'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : false,
+    "cacheQueryResult" : true
+  }
+}

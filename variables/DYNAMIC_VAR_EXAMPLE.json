@@ -1,0 +1,22 @@
+{
+  "initBlock" : {
+    "name" : "DYNAMIC_VAR_EXAMPLE",
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:10 - System DB (ORCL).SampleAppInitBlocks",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT 'Hi there!' from dual"
+    } ],
+    "variables" : [ {
+      "name" : "DYNAMIC_VAR_EXAMPLE",
+      "description" : "Used in dynamic variable setting example in SampleApp - 4.2 Custom Interactions",
+      "value" : "'Hello'",
+      "enableUsersToSetValue" : false,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : false,
+    "cacheQueryResult" : true
+  }
+}

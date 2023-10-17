@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "F50 Facts Headcount",
+    "description": "Headcount Fact Alias: Stores the headcount information at day and office grain.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_HEADCOUNT_F",
+    "joins": [      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F50 Facts Headcount.Day_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Day_Key"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F50 Facts Headcount.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key"
+          }
+        ]
+      }
+    ]
+  }
+}

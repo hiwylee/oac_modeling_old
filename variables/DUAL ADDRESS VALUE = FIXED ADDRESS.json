@@ -1,0 +1,22 @@
+{
+  "initBlock" : {
+    "name" : "DUAL ADDRESS VALUE = FIXED ADDRESS",
+    "type" : "SESSION",
+    "connectionPool" : "connectionPool:10 - System DB (ORCL).SampleAppInitBlocks",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "select '747 Howard St, San Francisco, CA 94103, US' from Dual"
+    } ],
+    "variables" : [ {
+      "name" : "OGS_ADDRESS",
+      "description" : "Used for Geospatial interaction examples",
+      "value" : "'747 Howard St, San Francisco, CA 94103, US'",
+      "enableUsersToSetValue" : true,
+      "securitySensitive" : false
+    } ],
+    "disable" : false,
+    "queryReturnsVariableNamesAndValues" : false,
+    "allowDeferredExecution" : false,
+    "cacheQueryResult" : true
+  }
+}

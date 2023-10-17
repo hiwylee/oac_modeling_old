@@ -1,0 +1,15 @@
+{
+  "physicalTable": {
+    "name": "F71 ODM Regression Results",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_REVENUE_F_EXPECT",
+    "joins": [      {
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F71 ODM Regression Results.ORDER_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Order_Key"
+          }
+        ]
+      }
+    ]
+  }
+}
