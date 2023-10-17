@@ -11,6 +11,8 @@
       "name" : "presentationTable:Sample Sales - 제주항공 HOL.Base Facts"
     }, {
       "name" : "presentationTable:Sample Sales - 제주항공 HOL.Customers"
+    }, {
+      "name" : "presentationTable:Sample Sales - 제주항공 HOL.Customer Regions"
     } ]
   }
 }
