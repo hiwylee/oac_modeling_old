@@ -2,6 +2,7 @@
   "logicalTable" : {
     "name" : "D3 Customers",
     "type" : "DIMENSION",
+    "primaryKey" : [ "Cust Key" ],
     "logicalColumns" : [ {
       "name" : "Cust Key",
       "dataType" : "NUMERIC",
@@ -15,7 +16,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.CUST_KEY" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Name",
       "dataType" : "VARCHAR",
@@ -29,7 +31,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.NAME" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Type Key",
       "dataType" : "VARCHAR",
@@ -43,7 +46,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.TYPE_KEY" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Fst Contact Dt",
       "dataType" : "DATETIME",
@@ -57,7 +61,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.FST_CONTACT_DT" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Segment Key",
       "dataType" : "NUMERIC",
@@ -71,7 +76,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.SEGMENT_KEY" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Income Lvl",
       "dataType" : "VARCHAR",
@@ -85,7 +91,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.INCOME_LVL" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Status Key",
       "dataType" : "VARCHAR",
@@ -99,7 +106,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.STATUS_KEY" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Lst Order Dt",
       "dataType" : "DATETIME",
@@ -113,7 +121,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.LST_ORDER_DT" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Address Key",
       "dataType" : "NUMERIC",
@@ -127,7 +136,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.ADDRESS_KEY" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Marital St",
       "dataType" : "VARCHAR",
@@ -141,7 +151,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.MARITAL_ST" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Prev Marital St",
       "dataType" : "VARCHAR",
@@ -155,7 +166,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.PREV_MARITAL_ST" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Prev Marital St Dt",
       "dataType" : "DATETIME",
@@ -169,7 +181,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.PREV_MARITAL_ST_DT" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Birth Dt",
       "dataType" : "DATETIME",
@@ -183,7 +196,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.BIRTH_DT" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Crdt Rate",
       "dataType" : "NUMERIC",
@@ -197,7 +211,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.CRDT_RATE" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Gender",
       "dataType" : "VARCHAR",
@@ -211,7 +226,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.GENDER" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Ltv",
       "dataType" : "NUMERIC",
@@ -225,7 +241,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.LTV" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Num Attribute",
       "dataType" : "NUMERIC",
@@ -239,7 +256,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.NUM_ATTRIBUTE" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Total Value",
       "dataType" : "VARCHAR",
@@ -253,7 +271,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.TOTAL_VALUE" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Address1",
       "dataType" : "VARCHAR",
@@ -267,7 +286,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.ADDRESS1" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Address2",
       "dataType" : "VARCHAR",
@@ -281,7 +301,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.ADDRESS2" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Postal Code",
       "dataType" : "VARCHAR",
@@ -295,7 +316,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.POSTAL_CODE" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Customer Postal Code"
     }, {
       "name" : "City",
       "dataType" : "VARCHAR",
@@ -309,7 +331,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.CITY" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Customer City"
     }, {
       "name" : "State Province",
       "dataType" : "VARCHAR",
@@ -323,7 +346,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.STATE_PROVINCE" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Customer State Province"
     }, {
       "name" : "Ctry Cd3 State Name",
       "dataType" : "VARCHAR",
@@ -337,7 +361,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.CTRY_CD3_STATE_NAME" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Ctry Cd3 State Abbrv",
       "dataType" : "VARCHAR",
@@ -351,7 +376,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.CTRY_CD3_STATE_ABBRV" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Ctry Cd3 State Name City",
       "dataType" : "VARCHAR",
@@ -365,7 +391,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.CTRY_CD3_STATE_NAME_CITY" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Longitude",
       "dataType" : "NUMERIC",
@@ -379,7 +406,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.LONGITUDE" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Latitude",
       "dataType" : "NUMERIC",
@@ -393,7 +421,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.LATITUDE" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Estab Name",
       "dataType" : "VARCHAR",
@@ -407,7 +436,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.ESTAB_NAME" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Region",
       "dataType" : "VARCHAR",
@@ -421,7 +451,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.REGION" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Customer Region"
     }, {
       "name" : "Iso Country Code3",
       "dataType" : "VARCHAR",
@@ -435,7 +466,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.ISO_COUNTRY_CODE3" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Country Name",
       "dataType" : "VARCHAR",
@@ -449,7 +481,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.COUNTRY_NAME" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Customer Country"
     }, {
       "name" : "State Province Abbrv",
       "dataType" : "VARCHAR",
@@ -463,7 +496,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.STATE_PROVINCE_ABBRV" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Details"
     }, {
       "name" : "Area",
       "dataType" : "VARCHAR",
@@ -477,7 +511,8 @@
             "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresses.AREA" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Customer Area"
     } ],
     "logicalTableSources" : [ {
       "name" : "LTS1 Customers",
@@ -496,6 +531,70 @@
       "enableFragmentSelection" : false,
       "distinctValues" : false
     } ],
-    "primaryKey" : [ "Cust Key" ]
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "합계",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "합계",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Details",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Cust Key" ],
+        "displayKey" : "Cust Key"
+      }, {
+        "name" : "Customer Region",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Region" ],
+        "displayKey" : "Region"
+      }, {
+        "name" : "Customer Area",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Area" ],
+        "displayKey" : "Area"
+      }, {
+        "name" : "Customer Country",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Country Name" ],
+        "displayKey" : "Country Name"
+      }, {
+        "name" : "Customer State Province",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "State Province" ],
+        "displayKey" : "State Province"
+      }, {
+        "name" : "Customer City",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "City" ],
+        "displayKey" : "City"
+      }, {
+        "name" : "Customer Postal Code",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Postal Code" ],
+        "displayKey" : "Postal Code"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "Cust Hierarchy",
+        "levels" : [ "합계", "Customer Region", "Customer Area", "Customer Country", "Customer State Province", "Customer City", "Customer Postal Code", "Details" ]
+      } ]
+    }
   }
 }
