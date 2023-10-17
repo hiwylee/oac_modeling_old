@@ -38,6 +38,39 @@
         "rule" : "SUM",
         "dataIsDense" : false
       }
+    }, {
+      "name" : "Month Ago Revenue",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "AGO(%1 , %2 , 1)",
+          "expressionObjects" : [ "logicalColumn:Sample Sales BM.F1 Revenue.Revenue", "logicalLevel:Sample Sales BM.D1 Time.Month" ]
+        }
+      }
+    }, {
+      "name" : "Year To Date Revenue",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "TODATE(%1 , %2 )",
+          "expressionObjects" : [ "logicalColumn:Sample Sales BM.F1 Revenue.Revenue", "logicalLevel:Sample Sales BM.D1 Time.Year" ]
+        }
+      }
+    }, {
+      "name" : "Period Rolling Sum",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "PERIODROLLING(%1 , -2, 0)",
+          "expressionObjects" : [ "logicalColumn:Sample Sales BM.F1 Revenue.Revenue" ]
+        }
+      }
     } ],
     "logicalTableSources" : [ {
       "name" : "LTS1 Revenue",

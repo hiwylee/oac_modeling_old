@@ -1,0 +1,21 @@
+{
+  "presentationTable" : {
+    "name" : "Base Facts",
+    "presentationColumns" : [ {
+      "name" : "Revenue",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.F1 Revenue.Revenue"
+    }, {
+      "name" : "Units",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.F1 Revenue.Units"
+    }, {
+      "name" : "Year To Date Revenue",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.F1 Revenue.Year To Date Revenue"
+    }, {
+      "name" : "Period Rolling Sum",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.F1 Revenue.Period Rolling Sum"
+    }, {
+      "name" : "Month Ago Revenue",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.F1 Revenue.Month Ago Revenue"
+    } ]
+  }
+}

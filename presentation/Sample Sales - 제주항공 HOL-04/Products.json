@@ -1,0 +1,60 @@
+{
+  "presentationTable" : {
+    "name" : "Products",
+    "presentationColumns" : [ {
+      "name" : "Brand",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D2 Products.Brand"
+    }, {
+      "name" : "Product",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D2 Products.Prod Dsc"
+    }, {
+      "name" : "Type",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D2 Products.Type"
+    }, {
+      "name" : "Line of Business",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D2 Products.Lob"
+    }, {
+      "name" : "Sequence",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D2 Products.Sequence"
+    }, {
+      "name" : "Brand Key",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D2 Products.Brand Key"
+    }, {
+      "name" : "Lob Key",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D2 Products.Lob Key"
+    }, {
+      "name" : "Type Key",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D2 Products.Type Key"
+    } ],
+    "hierarchies" : [ {
+      "name" : "Prod Hierarchy",
+      "sourceLogicalTable" : "logicalTable:Sample Sales BM.D2 Products",
+      "localization" : { },
+      "levels" : [ {
+        "name" : "합계",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM.D2 Products.합계",
+        "localization" : { }
+      }, {
+        "name" : "Product Brand",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM.D2 Products.Product Brand",
+        "displayColumn" : "presentationColumn:Sample Sales - 제주항공 HOL-04.Products.Brand",
+        "localization" : { }
+      }, {
+        "name" : "Product LOB",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM.D2 Products.Product LOB",
+        "displayColumn" : "presentationColumn:Sample Sales - 제주항공 HOL-04.Products.Line of Business",
+        "localization" : { }
+      }, {
+        "name" : "Product Type",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM.D2 Products.Product Type",
+        "displayColumn" : "presentationColumn:Sample Sales - 제주항공 HOL-04.Products.Type",
+        "localization" : { }
+      }, {
+        "name" : "세부정보",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM.D2 Products.세부정보",
+        "displayColumn" : "presentationColumn:Sample Sales - 제주항공 HOL-04.Products.Product",
+        "localization" : { }
+      } ]
+    } ]
+  }
+}

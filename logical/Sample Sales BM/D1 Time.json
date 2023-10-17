@@ -47,7 +47,7 @@
           }
         } ]
       },
-      "logicalLevel" : "Half Year"
+      "logicalLevel" : "세부정보"
     }, {
       "name" : "Cal Month",
       "dataType" : "NUMERIC",
@@ -62,7 +62,7 @@
           }
         } ]
       },
-      "logicalLevel" : "Month"
+      "logicalLevel" : "세부정보"
     }, {
       "name" : "Cal Qtr",
       "dataType" : "NUMERIC",
@@ -77,7 +77,7 @@
           }
         } ]
       },
-      "logicalLevel" : "Qtr"
+      "logicalLevel" : "세부정보"
     }, {
       "name" : "Cal Week",
       "dataType" : "NUMERIC",
@@ -92,7 +92,7 @@
           }
         } ]
       },
-      "logicalLevel" : "Week"
+      "logicalLevel" : "세부정보"
     }, {
       "name" : "Cal Year",
       "dataType" : "NUMERIC",
@@ -107,7 +107,7 @@
           }
         } ]
       },
-      "logicalLevel" : "Year"
+      "logicalLevel" : "세부정보"
     }, {
       "name" : "Day Of Month",
       "dataType" : "NUMERIC",
@@ -771,7 +771,7 @@
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
         "primaryKey" : [ "Per Name Week" ],
-        "displayKey" : "Cal Week",
+        "displayKey" : "Per Name Week",
         "chronologicalKey" : [ "Per Name Week" ]
       }, {
         "name" : "Half Year",
@@ -779,7 +779,7 @@
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
         "primaryKey" : [ "Per Name Half" ],
-        "displayKey" : "Cal Half",
+        "displayKey" : "Per Name Half",
         "chronologicalKey" : [ "Per Name Half" ]
       }, {
         "name" : "Qtr",
@@ -787,7 +787,7 @@
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
         "primaryKey" : [ "Per Name Qtr" ],
-        "displayKey" : "Cal Qtr",
+        "displayKey" : "Per Name Qtr",
         "chronologicalKey" : [ "Per Name Qtr" ]
       }, {
         "name" : "Month",
@@ -795,7 +795,7 @@
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
         "primaryKey" : [ "Per Name Month" ],
-        "displayKey" : "Cal Month",
+        "displayKey" : "Per Name Month",
         "chronologicalKey" : [ "Per Name Month" ]
       }, {
         "name" : "Year",
@@ -803,7 +803,7 @@
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
         "primaryKey" : [ "Per Name Year" ],
-        "displayKey" : "Cal Year",
+        "displayKey" : "Per Name Year",
         "chronologicalKey" : [ "Per Name Year" ]
       } ],
       "logicalHierarchies" : [ {

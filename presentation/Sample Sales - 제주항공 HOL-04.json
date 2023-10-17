@@ -1,0 +1,18 @@
+{
+  "subjectArea" : {
+    "name" : "Sample Sales - 제주항공 HOL-04",
+    "description" : "제주항공 HOL",
+    "sourceBusinessModel" : "businessModel:Sample Sales BM",
+    "tableOrder" : [ {
+      "name" : "presentationTable:Sample Sales - 제주항공 HOL-04.Time"
+    }, {
+      "name" : "presentationTable:Sample Sales - 제주항공 HOL-04.Products"
+    }, {
+      "name" : "presentationTable:Sample Sales - 제주항공 HOL-04.Base Facts"
+    }, {
+      "name" : "presentationTable:Sample Sales - 제주항공 HOL-04.Customers"
+    }, {
+      "name" : "presentationTable:Sample Sales - 제주항공 HOL-04.Customer Regions"
+    } ]
+  }
+}
