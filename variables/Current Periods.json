@@ -2,7 +2,7 @@
   "initBlock" : {
     "name" : "Current Periods",
     "type" : "GLOBAL",
-    "connectionPool" : "connectionPool:MySampleSalesDatabase.새 접속 풀_1",
+    "connectionPool" : "connectionPool:MySampleSalesDatabase.NF_Pools",
     "selectStatements" : [ {
       "databaseType" : "DEFAULT",
       "query" : "SELECT CALENDAR_DATE, PER_NAME_MONTH, PER_NAME_YEAR FROM BISAMPLE.SAMP_TIME_DAY_D WHERE CALENDAR_DATE = (SELECT MAX(BILL_DAY_DT) FROM BISAMPLE.SAMP_REVENUE_F)"
