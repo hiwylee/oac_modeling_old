@@ -108,9 +108,9 @@
         } ]
       },
       "aggregation" : {
-        "rule" : "NONE",
+        "rule" : "SUM",
         "dataIsDense" : false,
-        "aggregateByLevels" : [ "logicalLevel:Sample Sales BM.D2 Products.세부정보" ]
+        "aggregateByLevels" : [ "logicalLevel:Sample Sales BM.D2 Products.Product Type" ]
       }
     }, {
       "name" : "Product Type Revenue",
@@ -127,7 +127,7 @@
         } ]
       },
       "aggregation" : {
-        "rule" : "NONE",
+        "rule" : "SUM",
         "dataIsDense" : false,
         "aggregateByLevels" : [ "logicalLevel:Sample Sales BM.D2 Products.Product Type" ]
       }
