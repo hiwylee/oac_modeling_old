@@ -1,69 +1,228 @@
 {
-  "logicalTable" : {
-    "name" : "F1 Revenue",
-    "type" : "FACT",
-    "logicalColumns" : [ {
-      "name" : "Units",
-      "dataType" : "NUMERIC",
-      "writeable" : false,
-      "logicalColumnSource" : {
-        "derivedFrom" : "PHYSICAL_COLUMNS",
-        "physicalMappings" : [ {
-          "logicalTableSource" : "F1 Revenue",
-          "physicalExpression" : {
-            "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.F1 Revenue.UNITS" ]
-          }
-        } ]
-      },
-      "aggregation" : {
-        "rule" : "COUNT",
-        "dataIsDense" : false
-      }
-    }, {
-      "name" : "Revenue",
-      "dataType" : "NUMERIC",
-      "writeable" : false,
-      "logicalColumnSource" : {
-        "derivedFrom" : "PHYSICAL_COLUMNS",
-        "physicalMappings" : [ {
-          "logicalTableSource" : "F1 Revenue",
-          "physicalExpression" : {
-            "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.F1 Revenue.REVENUE" ]
-          }
-        } ]
-      },
-      "aggregation" : {
-        "rule" : "SUM",
-        "dataIsDense" : false
-      }
-    } ],
-    "logicalTableSources" : [ {
-      "name" : "F1 Revenue",
-      "disable" : false,
-      "tableMapping" : {
-        "tables" : [ "physicalTable:MySampleSalesDatabase.BISAMPLE.F1 Revenue" ]
-      },
-      "combineWithOtherFragments" : false,
-      "enableFragmentSelection" : false,
-      "distinctValues" : false
-    } ],
-    "joins" : [ {
-      "rightTable" : "logicalTable:Sample Sales BM.D1 Time",
-      "joinType" : "INNER",
-      "cardinality" : "MANY_TO_ONE",
-      "drivingTable" : "None"
-    }, {
-      "rightTable" : "logicalTable:Sample Sales BM.D2 Products",
-      "joinType" : "INNER",
-      "cardinality" : "MANY_TO_ONE",
-      "drivingTable" : "None"
-    }, {
-      "rightTable" : "logicalTable:Sample Sales BM.D3 Customers",
-      "joinType" : "INNER",
-      "cardinality" : "MANY_TO_ONE",
-      "drivingTable" : "None"
-    } ]
-  }
+   "logicalTable": {
+      "name": "F1 Revenue",
+      "type": "FACT",
+      "logicalColumns": [
+         {
+            "name": "Units",
+            "dataType": "NUMERIC",
+            "writeable": false,
+            "logicalColumnSource": {
+               "derivedFrom": "PHYSICAL_COLUMNS",
+               "physicalMappings": [
+                  {
+                     "logicalTableSource": "LTS1 Revenue",
+                     "physicalExpression": {
+                        "expressionTemplate": "%1",
+                        "expressionObjects": [
+                           "physicalColumn:MySampleSalesDatabase.BISAMPLE.F1 Revenue.UNITS"
+                        ]
+                     }
+                  }
+               ]
+            },
+            "aggregation": {
+               "rule": "COUNT",
+               "dataIsDense": false
+            }
+         },
+         {
+            "name": "Revenue",
+            "dataType": "NUMERIC",
+            "writeable": false,
+            "logicalColumnSource": {
+               "derivedFrom": "PHYSICAL_COLUMNS",
+               "physicalMappings": [
+                  {
+                     "logicalTableSource": "LTS1 Revenue",
+                     "physicalExpression": {
+                        "expressionTemplate": "%1",
+                        "expressionObjects": [
+                           "physicalColumn:MySampleSalesDatabase.BISAMPLE.F1 Revenue.REVENUE"
+                        ]
+                     }
+                  }
+               ]
+            },
+            "aggregation": {
+               "rule": "SUM",
+               "dataIsDense": false
+            }
+         },
+         {
+            "name": "Month Ago Revenue",
+            "dataType": "NUMERIC",
+            "writeable": false,
+            "logicalColumnSource": {
+               "derivedFrom": "LOGICAL_COLUMNS",
+               "logicalExpression": {
+                  "expressionTemplate": "AGO(%1 , %2 , 1)",
+                  "expressionObjects": [
+                     "logicalColumn:Sample Sales BM.F1 Revenue.Revenue",
+                     "logicalLevel:Sample Sales BM.D1 Time.Month"
+                  ]
+               }
+            }
+         },
+         {
+            "name": "Year To Date Revenue",
+            "dataType": "NUMERIC",
+            "writeable": false,
+            "logicalColumnSource": {
+               "derivedFrom": "LOGICAL_COLUMNS",
+               "logicalExpression": {
+                  "expressionTemplate": "TODATE(%1 , %2 )",
+                  "expressionObjects": [
+                     "logicalColumn:Sample Sales BM.F1 Revenue.Revenue",
+                     "logicalLevel:Sample Sales BM.D1 Time.Year"
+                  ]
+               }
+            }
+         },
+         {
+            "name": "Period Rolling Sum",
+            "dataType": "NUMERIC",
+            "writeable": false,
+            "logicalColumnSource": {
+               "derivedFrom": "LOGICAL_COLUMNS",
+               "logicalExpression": {
+                  "expressionTemplate": "PERIODROLLING(%1 , -2, 0)",
+                  "expressionObjects": [
+                     "logicalColumn:Sample Sales BM.F1 Revenue.Revenue"
+                  ]
+               }
+            }
+         },
+         {
+            "name": "Actual Unit Price",
+            "dataType": "NUMERIC",
+            "writeable": false,
+            "logicalColumnSource": {
+               "derivedFrom": "LOGICAL_COLUMNS",
+               "logicalExpression": {
+                  "expressionTemplate": "%1 / %2",
+                  "expressionObjects": [
+                     "logicalColumn:Sample Sales BM.F1 Revenue.Revenue",
+                     "logicalColumn:Sample Sales BM.F1 Revenue.Units"
+                  ]
+               }
+            }
+         },
+         {
+            "name": "Revenue Rank",
+            "dataType": "INT",
+            "writeable": false,
+            "logicalColumnSource": {
+               "derivedFrom": "LOGICAL_COLUMNS",
+               "logicalExpression": {
+                  "expressionTemplate": "RANK(%1)",
+                  "expressionObjects": [
+                     "logicalColumn:Sample Sales BM.F1 Revenue.Revenue"
+                  ]
+               }
+            }
+         },
+         {
+            "name": "Product Total Revenue",
+            "dataType": "NUMERIC",
+            "writeable": false,
+            "logicalColumnSource": {
+               "derivedFrom": "PHYSICAL_COLUMNS",
+               "physicalMappings": [
+                  {
+                     "logicalTableSource": "LTS1 Revenue",
+                     "physicalExpression": {
+                        "expressionTemplate": "%1",
+                        "expressionObjects": [
+                           "physicalColumn:MySampleSalesDatabase.BISAMPLE.F1 Revenue.REVENUE"
+                        ]
+                     }
+                  }
+               ]
+            },
+            "aggregation": {
+               "rule": "SUM",
+               "dataIsDense": false,
+               "aggregateByLevels": [
+                  "logicalLevel:Sample Sales BM.D2 Products.Product Type"
+               ]
+            }
+         },
+         {
+            "name": "Product Type Revenue",
+            "dataType": "NUMERIC",
+            "writeable": false,
+            "logicalColumnSource": {
+               "derivedFrom": "PHYSICAL_COLUMNS",
+               "physicalMappings": [
+                  {
+                     "logicalTableSource": "LTS1 Revenue",
+                     "physicalExpression": {
+                        "expressionTemplate": "%1",
+                        "expressionObjects": [
+                           "physicalColumn:MySampleSalesDatabase.BISAMPLE.F1 Revenue.REVENUE"
+                        ]
+                     }
+                  }
+               ]
+            },
+            "aggregation": {
+               "rule": "SUM",
+               "dataIsDense": false,
+               "aggregateByLevels": [
+                  "logicalLevel:Sample Sales BM.D2 Products.Product Type"
+               ]
+            }
+         },
+         {
+            "name": "Product Share",
+            "dataType": "DOUBLE",
+            "writeable": false,
+            "logicalColumnSource": {
+               "derivedFrom": "LOGICAL_COLUMNS",
+               "logicalExpression": {
+                  "expressionTemplate": "ROUND(100* %1 /%2 , 1)",
+                  "expressionObjects": [
+                     "logicalColumn:Sample Sales BM.F1 Revenue.Revenue",
+                     "logicalColumn:Sample Sales BM.F1 Revenue.Product Type Revenue"
+                  ]
+               }
+            }
+         }
+      ],
+      "logicalTableSources": [
+         {
+            "name": "LTS1 Revenue",
+            "disable": false,
+            "tableMapping": {
+               "tables": [
+                  "physicalTable:MySampleSalesDatabase.BISAMPLE.F1 Revenue"
+               ]
+            },
+            "combineWithOtherFragments": false,
+            "enableFragmentSelection": false,
+            "distinctValues": false
+         }
+      ],
+      "joins": [
+         {
+            "rightTable": "logicalTable:Sample Sales BM.D1 Time",
+            "joinType": "INNER",
+            "cardinality": "MANY_TO_ONE",
+            "drivingTable": "None"
+         },
+         {
+            "rightTable": "logicalTable:Sample Sales BM.D2 Products",
+            "joinType": "INNER",
+            "cardinality": "MANY_TO_ONE",
+            "drivingTable": "None"
+         },
+         {
+            "rightTable": "logicalTable:Sample Sales BM.D3 Customers",
+            "joinType": "INNER",
+            "cardinality": "MANY_TO_ONE",
+            "drivingTable": "None"
+         }
+      ]
+   }
 }
