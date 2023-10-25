@@ -4,7 +4,7 @@
     "sourceType" : "SELECT",
     "selectStatements" : [ {
       "databaseType" : "DEFAULT",
-      "query" : "select  PRODUCT_ID, PRODUCT_IMAGE_ID from BISAMPLE.SAMP_PROD_IMG_D"
+      "query" : "select IMAGE, PRODUCT_ID, PRODUCT_IMAGE_ID from BISAMPLE.SAMP_PROD_IMG_D"
     } ],
     "physicalColumns" : [ {
       "name" : "PRODUCT_IMAGE_ID",

@@ -22,14 +22,6 @@
             "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Address_Key"
           }
         ]
-      },
-      {
-        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts",
-        "joinConditions": [          {
-            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
-            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.CUST_KEY"
-          }
-        ]
       }
     ],
     "additionalKeys": [

@@ -6,10 +6,11 @@
     "connectionPools" : [ {
       "name" : "SampleRelationalConnection",
       "description" : "Connection pool for Sample relational db source.\r\nInstead of editing connectivity parameters in each connection pool, update the RPD and Session variables that hold that information (Manage > Variables)\r\n\r\nYou can also replace the \r\n\"VALUEOF(NQ_SESSION.DSN)\" \r\nby the full string below :\r\n(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=VALUEOF(DB_HOST))(PORT=VALUEOF(DB_PORT))))(CONNECT_DATA=(SID=VALUEOF(DB_SID))))",
-      "connection" : "'system'.'JEJUAIR-20231012-01'",
+      "connection" : "'system'.'JEJUAIR_WORKSHOP'",
       "remoteConnection" : false,
       "maxConnections" : 10,
       "requiresFullyQualifedTableNames" : true,
+      "connectionTimeout" : 5,
       "connectionTimeoutUnit" : "NEVER",
       "multithreaded" : true,
       "supportParams" : true,
