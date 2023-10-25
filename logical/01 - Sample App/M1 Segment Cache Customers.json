@@ -1,0 +1,58 @@
+{
+  "logicalTable" : {
+    "name" : "M1 Segment Cache Customers",
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "X01 Cache GUID",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "M1 Segment Cache Customers",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M01 Mktg Cache Customers.GUID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "X02 Cache Qualified ID",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "M1 Segment Cache Customers",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M01 Mktg Cache Customers.QUALIFIED_ID" ]
+          }
+        } ]
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "M1 Segment Cache Customers",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.M01 Mktg Cache Customers" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "joins" : [ {
+      "rightTable" : "logicalTable:01 - Sample App.D6 Customers (Snowflakes)",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:01 - Sample App.D6a Customers (SCD ViewQuery)",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:01 - Sample App.D6b Customers (SCD Session)",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    } ]
+  }
+}

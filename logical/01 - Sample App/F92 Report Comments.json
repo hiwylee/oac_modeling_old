@@ -1,0 +1,169 @@
+{
+  "logicalTable" : {
+    "name" : "F92 Report Comments",
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "Id",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "F92 Report Comments",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.COMMENT_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Commentary",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "F92 Report Comments",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.COMMENTARY" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "MAX",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Day key",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "F92 Report Comments",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.DAY_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Empl key",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "F92 Report Comments",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.EMPL_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Lob key",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "F92 Report Comments",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.LOB_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "# of Cumulated Comments",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "F92 Report Comments",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.COMMENT_ID" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "# of Comments",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "F92 Report Comments",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 0 THEN %2 WHEN %1 IS NULL  THEN %2 END ",
+            "expressionObjects" : [ "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Distance", "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.COMMENT_ID" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Comment id",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "F92 Report Comments",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 0 THEN %2 WHEN %1 IS NULL  THEN %2 END ",
+            "expressionObjects" : [ "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Distance", "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.COMMENT_ID" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "MAX",
+        "dataIsDense" : false
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "F92 Report Comments",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)", "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child", "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments",
+          "rightTable" : "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+          "joinType" : "INNER",
+          "disable" : false
+        }, {
+          "leftTable" : "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments",
+          "rightTable" : "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "joins" : [ {
+      "rightTable" : "logicalTable:01 - Sample App.D0 Time",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:01 - Sample App.D1 Products (Level Based Hier)",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "rightTable" : "logicalTable:01 - Sample App.D5 Sales Rep (Parent Child Hier)",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    } ]
+  }
+}
