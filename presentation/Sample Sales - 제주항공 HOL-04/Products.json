@@ -28,6 +28,7 @@
     } ],
     "hierarchies" : [ {
       "name" : "Prod Hierarchy",
+      "description" : "Prod Hierarchy",
       "sourceLogicalTable" : "logicalTable:Sample Sales BM.D2 Products",
       "localization" : { },
       "levels" : [ {

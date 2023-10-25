@@ -9,7 +9,8 @@
       "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D3 Customers.Name"
     } ],
     "hierarchies" : [ {
-      "name" : "Cust Hierarchy",
+      "name" : "Customer Hierarchy",
+      "description" : "Customer Hierarchy",
       "sourceLogicalTable" : "logicalTable:Sample Sales BM.D3 Customers",
       "localization" : { },
       "levels" : [ {

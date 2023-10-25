@@ -592,7 +592,7 @@
         "displayKey" : "Postal Code"
       } ],
       "logicalHierarchies" : [ {
-        "name" : "Cust Hierarchy",
+        "name" : "Customer Hierarchy",
         "levels" : [ "합계", "Customer Region", "Customer Area", "Customer Country", "Customer State Province", "Customer City", "Customer Postal Code", "Details" ]
       } ]
     }

@@ -22,6 +22,7 @@
     } ],
     "hierarchies" : [ {
       "name" : "Time Hierarchy",
+      "description" : "Time Hierarchy",
       "sourceLogicalTable" : "logicalTable:Sample Sales BM.D1 Time",
       "localization" : { },
       "levels" : [ {
