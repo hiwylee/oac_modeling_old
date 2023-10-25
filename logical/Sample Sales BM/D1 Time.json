@@ -47,7 +47,7 @@
           }
         } ]
       },
-      "logicalLevel" : "Half Year"
+      "logicalLevel" : "세부정보"
     }, {
       "name" : "Cal Month",
       "dataType" : "NUMERIC",
@@ -62,7 +62,7 @@
           }
         } ]
       },
-      "logicalLevel" : "Month"
+      "logicalLevel" : "세부정보"
     }, {
       "name" : "Cal Qtr",
       "dataType" : "NUMERIC",
@@ -77,7 +77,7 @@
           }
         } ]
       },
-      "logicalLevel" : "Qtr"
+      "logicalLevel" : "세부정보"
     }, {
       "name" : "Cal Week",
       "dataType" : "NUMERIC",
@@ -92,7 +92,7 @@
           }
         } ]
       },
-      "logicalLevel" : "Week"
+      "logicalLevel" : "세부정보"
     }, {
       "name" : "Cal Year",
       "dataType" : "NUMERIC",
@@ -107,7 +107,7 @@
           }
         } ]
       },
-      "logicalLevel" : "Year"
+      "logicalLevel" : "세부정보"
     }, {
       "name" : "Day Of Month",
       "dataType" : "NUMERIC",
@@ -763,46 +763,47 @@
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
         "primaryKey" : [ "Calendar Date" ],
-        "displayKey" : "Calendar Date"
+        "displayKey" : "Calendar Date",
+        "chronologicalKey" : [ "Calendar Date" ]
       }, {
         "name" : "Week",
         "numberOfElements" : 1,
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
-        "primaryKey" : [ "Cal Week", "Per Name Week" ],
-        "displayKey" : "Cal Week",
+        "primaryKey" : [ "Per Name Week" ],
+        "displayKey" : "Per Name Week",
         "chronologicalKey" : [ "Per Name Week" ]
       }, {
         "name" : "Half Year",
         "numberOfElements" : 1,
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
-        "primaryKey" : [ "Cal Half", "Per Name Half" ],
-        "displayKey" : "Cal Half",
+        "primaryKey" : [ "Per Name Half" ],
+        "displayKey" : "Per Name Half",
         "chronologicalKey" : [ "Per Name Half" ]
       }, {
         "name" : "Qtr",
         "numberOfElements" : 1,
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
-        "primaryKey" : [ "Cal Qtr", "Per Name Qtr" ],
-        "displayKey" : "Cal Qtr",
+        "primaryKey" : [ "Per Name Qtr" ],
+        "displayKey" : "Per Name Qtr",
         "chronologicalKey" : [ "Per Name Qtr" ]
       }, {
         "name" : "Month",
         "numberOfElements" : 1,
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
-        "primaryKey" : [ "Cal Month", "Per Name Month" ],
-        "displayKey" : "Cal Month",
+        "primaryKey" : [ "Per Name Month" ],
+        "displayKey" : "Per Name Month",
         "chronologicalKey" : [ "Per Name Month" ]
       }, {
         "name" : "Year",
         "numberOfElements" : 1,
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
-        "primaryKey" : [ "Cal Year", "Per Name Year" ],
-        "displayKey" : "Cal Year",
+        "primaryKey" : [ "Per Name Year" ],
+        "displayKey" : "Per Name Year",
         "chronologicalKey" : [ "Per Name Year" ]
       } ],
       "logicalHierarchies" : [ {

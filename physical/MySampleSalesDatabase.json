@@ -3,8 +3,8 @@
     "name" : "MySampleSalesDatabase",
     "databaseType" : "ORACLE_ADW",
     "connectionPools" : [ {
-      "name" : "새 접속 풀_1",
-      "connection" : "'system'.'JEJUAIR-20231012-01'",
+      "name" : "NF_Pools",
+      "connection" : "'system'.'NF'",
       "remoteConnection" : false,
       "maxConnections" : 10,
       "requiresFullyQualifedTableNames" : true,

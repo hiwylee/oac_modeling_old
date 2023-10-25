@@ -1,11 +1,9 @@
 {
   "database" : {
-    "name" : "01 - Sample App Data (ORCL)",
-    "description" : "This datasource represents actual sales, booking and inventory data.",
+    "name" : "10 - System DB (ORCL)",
     "databaseType" : "ORACLE_DATABASE",
     "connectionPools" : [ {
-      "name" : "SampleRelationalConnection",
-      "description" : "Connection pool for Sample relational db source.\r\nInstead of editing connectivity parameters in each connection pool, update the RPD and Session variables that hold that information (Manage > Variables)\r\n\r\nYou can also replace the \r\n\"VALUEOF(NQ_SESSION.DSN)\" \r\nby the full string below :\r\n(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=VALUEOF(DB_HOST))(PORT=VALUEOF(DB_PORT))))(CONNECT_DATA=(SID=VALUEOF(DB_SID))))",
+      "name" : "SampleAppInitBlocks",
       "connection" : "'system'.'JEJUAIR_ADW_TUTOR'",
       "remoteConnection" : false,
       "maxConnections" : 10,
@@ -17,7 +15,8 @@
       "writeBackConfig" : {
         "dbSupportsUnicode" : false,
         "bulkInsertBufferSize" : 10240,
-        "transactionBoundary" : 0
+        "transactionBoundary" : 1000,
+        "tempTablePrefix" : "TT"
       }
     } ],
     "virtualPrivateDatabase" : false,
@@ -51,7 +50,7 @@
       "maxRows" : 100000,
       "maxTimeSetting" : "INHERIT",
       "maxTime" : 600,
-      "directDatabaseRequests" : "INHERIT"
+      "directDatabaseRequests" : "ALLOW"
     }, {
       "accessor" : "role:SampleAppRole1",
       "maxRowSetting" : "INHERIT",

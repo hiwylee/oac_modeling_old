@@ -1,0 +1,65 @@
+{
+  "presentationTable" : {
+    "name" : "Time",
+    "presentationColumns" : [ {
+      "name" : "Calendar Date",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D1 Time.Calendar Date"
+    }, {
+      "name" : "Per Name Half",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D1 Time.Per Name Half"
+    }, {
+      "name" : "Per Name Month",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D1 Time.Per Name Month"
+    }, {
+      "name" : "Per Name Qtr",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D1 Time.Per Name Qtr"
+    }, {
+      "name" : "Per Name Week",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D1 Time.Per Name Week"
+    }, {
+      "name" : "Per Name Year",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM.D1 Time.Per Name Year"
+    } ],
+    "hierarchies" : [ {
+      "name" : "Time Hierarchy",
+      "description" : "Time Hierarchy",
+      "sourceLogicalTable" : "logicalTable:Sample Sales BM.D1 Time",
+      "localization" : { },
+      "levels" : [ {
+        "name" : "합계",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM.D1 Time.합계",
+        "localization" : { }
+      }, {
+        "name" : "Year",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM.D1 Time.Year",
+        "displayColumn" : "presentationColumn:Sample Sales - 제주항공 HOL-04.Time.Per Name Year",
+        "localization" : { }
+      }, {
+        "name" : "Half Year",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM.D1 Time.Half Year",
+        "displayColumn" : "presentationColumn:Sample Sales - 제주항공 HOL-04.Time.Per Name Half",
+        "localization" : { }
+      }, {
+        "name" : "Qtr",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM.D1 Time.Qtr",
+        "displayColumn" : "presentationColumn:Sample Sales - 제주항공 HOL-04.Time.Per Name Qtr",
+        "localization" : { }
+      }, {
+        "name" : "Month",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM.D1 Time.Month",
+        "displayColumn" : "presentationColumn:Sample Sales - 제주항공 HOL-04.Time.Per Name Month",
+        "localization" : { }
+      }, {
+        "name" : "Week",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM.D1 Time.Week",
+        "displayColumn" : "presentationColumn:Sample Sales - 제주항공 HOL-04.Time.Per Name Week",
+        "localization" : { }
+      }, {
+        "name" : "세부정보",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM.D1 Time.세부정보",
+        "displayColumn" : "presentationColumn:Sample Sales - 제주항공 HOL-04.Time.Calendar Date",
+        "localization" : { }
+      } ]
+    } ]
+  }
+}
